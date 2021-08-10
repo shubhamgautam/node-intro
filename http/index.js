@@ -1,6 +1,6 @@
 const http = require('http');
 
-
+const port = 3000;
 const server = http.createServer((request, response) => {
     if (request.url === "/") {
         response.write('<div>Hello world</div>');
@@ -8,6 +8,6 @@ const server = http.createServer((request, response) => {
     }
 });
 
-server.listen('3000');
+server.listen(port);
 
-console.log('Listening on port 3333...');
+console.log(`Listening on port ${port}...`);
